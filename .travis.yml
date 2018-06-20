@@ -1,5 +1,0 @@
-language: csharp
-solution: Sitecore.Akamai.sln
-install:
-  - nuget restore Sitecore.Akamai.sln
-  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
