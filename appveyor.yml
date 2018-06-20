@@ -7,9 +7,8 @@ deploy:
   provider: GitHub
   auth_token:
     secure: rkLSxUbN2YMMG/r6lzLq1PN0n07dqJBtk/8ZR2c/InGy0SBOsmqGXfIQWMQOZUAs 
-  artifact: /.*\.update/            # upload all .update to release assets
   draft: false
   prerelease: false
   on:
     branch: master                 # release from master branch only
-    appveyor_repo_tag: false       # deploy on tag push only
+    appveyor_repo_tag: true       # deploy on tag push only
