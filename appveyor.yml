@@ -16,3 +16,6 @@ deploy:
   on:
     branch: master                 # release from master branch only
     appveyor_repo_tag: true       # deploy on tag push only
+	
+install:
+  - nuget sources add -Name SitecorePublicFeed -Source https://sitecore.myget.org/F/sc-packages/api/v3/index.json
