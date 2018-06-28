@@ -1,6 +1,8 @@
 artifacts:
   - path: test.update
     name: MyApp
+before_build:
+  - nuget restore Sitecore.Akamai.sln
 build:
   project: Sitecore.Akamai.sln
 deploy:
