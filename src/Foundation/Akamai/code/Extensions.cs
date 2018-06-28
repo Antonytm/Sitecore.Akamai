@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CDN.Akamai.DeviceDetection
+namespace Foundation.Akamai
 {
     public static class Extensions
     {
