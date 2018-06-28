@@ -1,6 +1,8 @@
 artifacts:
   - path: test.update
     name: MyApp
+build:
+  project: Sitecore.Akamai.sln
 deploy:
   release: myproduct-v$(appveyor_build_version)
   description: 'Release description'
