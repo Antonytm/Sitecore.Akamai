@@ -18,4 +18,4 @@ deploy:
     branch: master                 # release from master branch only
     appveyor_repo_tag: true       # deploy on tag push only
 install:
-  - ps: Install-PackageProvider -Name Sitecore.Courier -Force
+  - ps: Install-Module -Name Sitecore.Courier -Force
