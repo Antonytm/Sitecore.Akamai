@@ -15,13 +15,24 @@ namespace Foundation.Akamai.GeoIp
         {
             //IP doesn't matter here, but it is present in LookupProviderBase definition
             var information = new WhoIsInformation();
-            var headerValue = HttpContext.Current.Request.Headers["X-Akamai-Edgescape"];
-            if (!string.IsNullOrEmpty(headerValue))
+            if (HttpContext.Current != null &&
+                HttpContext.Current.Request != null)
             {
-                _dictionary = headerValue.ParseAkamaiHeader();
-                FillInforation(information);
+                if(string.IsNullOrEmpty(HttpContext.Current.Request.Headers["X-Akamai-Edgescape"]))
+                {
+                    var headerValue = HttpContext.Current.Request.Headers["X-Akamai-Edgescape"];
+                    if (!string.IsNullOrEmpty(headerValue))
+                    {
+                        _dictionary = headerValue.ParseAkamaiHeader();
+                        FillInforation(information);
+                    }
+                    return information;
+                }
+                Sitecore.Diagnostics.Log.Error("X-Akamai-Edgescape header is not present, please configure Akamain in proper way: https://community.akamai.com/customers/s/article/Content-Targeting-a-basic-introduction?language=en_US", this);
+                return null;
             }
-            return information;
+            Sitecore.Diagnostics.Log.Error("Foundation.Akamai.GeoIp.GetInformationByIp was called from thread where HttpContext.Current is not present", this);
+            return null;
         }
 
         private void FillInforation(WhoIsInformation information)
