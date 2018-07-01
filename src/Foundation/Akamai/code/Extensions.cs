@@ -8,9 +8,9 @@ namespace Foundation.Akamai
 {
     public static class Extensions
     {
-        public static Dictionary<string, string> ParseAkamaiHeader(this string headerValue)
+        public static Dictionary<string, string> ParseAkamaiHeader(this string headerValue, string delimiter = ",")
         {
-            var pairs = headerValue.Split(',').Select(x => x.Trim());
+            var pairs = headerValue.Split(new string[] { delimiter }, StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim());
             var dictionary = new Dictionary<string, string>();
             foreach (var pair in pairs)
             {

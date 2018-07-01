@@ -1,0 +1,19 @@
+﻿---
+ID: "bd5ef761-ada8-44c2-9249-861217397e83"
+Parent: "6f9a8f6e-5317-47e3-aeca-d7cbef06ec9a"
+Template: "854ba861-63ea-4a0c-8c7b-541e9a7ec4c1"
+Path: /sitecore/system/Settings/Rules/Conditional Renderings/Tags/Akamai
+DB: master
+SharedFields:
+- ID: "42f77151-098f-496a-94cf-590b7edeeabe"
+  Hint: Tags
+  Type: Multilist
+  Value: "{D0354198-9477-4742-9350-861F4800DEE4}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180701T125455Z

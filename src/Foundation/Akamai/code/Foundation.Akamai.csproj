@@ -116,8 +116,13 @@
     <None Include="\README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Const.cs" />
+    <Compile Include="DeviceDetection\Rules\Conditions\DeviceIsMobile.cs" />
+    <Compile Include="DeviceDetection\HeaderParser.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="GeoIp\HeaderParser.cs" />
     <Compile Include="GeoIp\LookupProvider.cs" />
+    <Compile Include="HeaderParser.cs" />
     <Compile Include="Pipelines\StartTracking\UpdateGeoIpData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
