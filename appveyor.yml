@@ -6,6 +6,8 @@ before_build:
   - nuget restore Sitecore.Akamai.sln
 build:
   project: Sitecore.Akamai.sln
+after_build:
+  - ps: .\build\build.ps1  
 deploy:
   release: myproduct-v$(appveyor_build_version)
   description: 'Release description'
