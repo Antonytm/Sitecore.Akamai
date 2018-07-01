@@ -19,3 +19,4 @@ deploy:
     appveyor_repo_tag: true       # deploy on tag push only
 install:
   - ps: Install-Module -Name Sitecore.Courier -Force
+  - ps: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
