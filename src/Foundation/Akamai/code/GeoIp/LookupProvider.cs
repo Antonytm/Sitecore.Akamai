@@ -18,7 +18,7 @@ namespace Foundation.Akamai.GeoIp
             if (HttpContext.Current != null &&
                 HttpContext.Current.Request != null)
             {
-                if(string.IsNullOrEmpty(HttpContext.Current.Request.Headers["X-Akamai-Edgescape"]))
+                if(!string.IsNullOrEmpty(HttpContext.Current.Request.Headers["X-Akamai-Edgescape"]))
                 {
                     var headerValue = HttpContext.Current.Request.Headers["X-Akamai-Edgescape"];
                     if (!string.IsNullOrEmpty(headerValue))

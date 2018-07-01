@@ -8,7 +8,10 @@ namespace Foundation.Akamai.Pipelines
         public void Process(object args)
         {
             var whois = new LookupProvider().GetInformationByIp("");
-            Sitecore.Analytics.Tracker.Current.Interaction.SetGeoData(whois);
+            if(whois!=null)
+            {
+                Sitecore.Analytics.Tracker.Current.Interaction.SetGeoData(whois);
+            }
         }
     }
 }
