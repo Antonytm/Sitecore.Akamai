@@ -9,15 +9,15 @@ build:
 after_build:
   - ps: .\build\build.ps1  
 deploy:
-  release: myproduct-v$(appveyor_build_version)
-  description: 'Release description'
+  release: Sitecore.Akamai-v$(appveyor_build_version)
+  description: 'Using Akamai features inside Sitecore'
   provider: GitHub
   auth_token:
     secure: rkLSxUbN2YMMG/r6lzLq1PN0n07dqJBtk/8ZR2c/InGy0SBOsmqGXfIQWMQOZUAs 
   draft: false
   prerelease: false
   on:
-    branch: master                 # release from master branch only
+    branch: master                # release from master branch only
     appveyor_repo_tag: true       # deploy on tag push only
 install:
   - ps: Install-Module -Name Sitecore.Courier -Force
