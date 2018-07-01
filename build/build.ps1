@@ -1,4 +1,4 @@
-$version = $env:PACKAGE_VERSION.$env.APPVEYOR_BUILD_NUMBER
+$version = $env:APPVEYOR_BUILD_VERSION.$env.APPVEYOR_BUILD_NUMBER
 if ($version -eq $null) {
     $version = "1.0.0.0"
 }
