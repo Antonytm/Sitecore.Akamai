@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Const.cs" />
+    <Compile Include="DeviceDetection\Rules\Conditions\DeviceIsTablet.cs" />
     <Compile Include="DeviceDetection\Rules\Conditions\DeviceIsMobile.cs" />
     <Compile Include="DeviceDetection\HeaderParser.cs" />
     <Compile Include="Extensions.cs" />
