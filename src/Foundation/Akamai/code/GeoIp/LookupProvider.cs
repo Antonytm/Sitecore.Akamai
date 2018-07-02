@@ -18,9 +18,9 @@ namespace Foundation.Akamai.GeoIp
             if (HttpContext.Current != null &&
                 HttpContext.Current.Request != null)
             {
-                if(!string.IsNullOrEmpty(HttpContext.Current.Request.Headers["X-Akamai-Edgescape"]))
+                if(!string.IsNullOrEmpty(HttpContext.Current.Request.Headers[Const.HeaderNames.GeoIP]))
                 {
-                    var headerValue = HttpContext.Current.Request.Headers["X-Akamai-Edgescape"];
+                    var headerValue = HttpContext.Current.Request.Headers[Const.HeaderNames.GeoIP];
                     if (!string.IsNullOrEmpty(headerValue))
                     {
                         _dictionary = headerValue.ParseAkamaiHeader();
@@ -37,18 +37,18 @@ namespace Foundation.Akamai.GeoIp
 
         private void FillInforation(WhoIsInformation information)
         {
-            information.Country = _dictionary.ContainsKey("country_code") ? _dictionary["country_code"] : "";
-            information.Region = _dictionary.ContainsKey("region_code") ? _dictionary["region_code"] : "";
-            information.City = _dictionary.ContainsKey("city") ? _dictionary["city"] : "";
-            information.AreaCode = _dictionary.ContainsKey("areacode") ? _dictionary["areacode"] : "";
-            information.PostalCode = _dictionary.ContainsKey("zip") ? _dictionary["zip"] : "";
-            information.Isp = _dictionary.ContainsKey("network") ? _dictionary["network"] : "";
+            information.Country = _dictionary.ContainsKey(Const.GeoIpProperties.CountryCode) ? _dictionary[Const.GeoIpProperties.CountryCode] : "";
+            information.Region = _dictionary.ContainsKey(Const.GeoIpProperties.GeoRegion) ? _dictionary[Const.GeoIpProperties.GeoRegion] : "";
+            information.City = _dictionary.ContainsKey(Const.GeoIpProperties.City) ? _dictionary[Const.GeoIpProperties.City] : "";
+            information.AreaCode = _dictionary.ContainsKey(Const.GeoIpProperties.AreaCode) ? _dictionary[Const.GeoIpProperties.AreaCode] : "";
+            information.PostalCode = _dictionary.ContainsKey(Const.GeoIpProperties.Zip) ? _dictionary[Const.GeoIpProperties.Zip] : "";
+            information.Isp = _dictionary.ContainsKey(Const.GeoIpProperties.Network) ? _dictionary[Const.GeoIpProperties.Network] : "";
 
-            string latitude = _dictionary.ContainsKey("lat") ? _dictionary["lat"] : "";
+            string latitude = _dictionary.ContainsKey(Const.GeoIpProperties.Latitude) ? _dictionary[Const.GeoIpProperties.Latitude] : "";
             double.TryParse(latitude, out double doubleLatitude);
             information.Latitude = doubleLatitude;
 
-            string longitude = _dictionary.ContainsKey("long") ? _dictionary["long"] : "";
+            string longitude = _dictionary.ContainsKey(Const.GeoIpProperties.Longitude) ? _dictionary[Const.GeoIpProperties.Longitude] : "";
             double.TryParse(longitude, out double doubleLongitude);
             information.Longitude = doubleLongitude;
         }
