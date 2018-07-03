@@ -106,13 +106,6 @@
     <Content Include="App_Config\Include\Foundation\Foundation.Sitecore.Akamai.config" />
     <Content Include="App_Config\Include\Foundation\Foundation.Sitecore.Akamai.Serialization.config" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
-    <Content Include="web.config" />
-    <None Include="web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-    <None Include="web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
     <None Include="\README.md" />
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +116,8 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="GeoIp\HeaderParser.cs" />
     <Compile Include="GeoIp\LookupProvider.cs" />
+    <Compile Include="GeoIp\Rules\Conditions\CountryCodeCondition.cs" />
+    <Compile Include="GeoIp\Rules\Conditions\CityCondition.cs" />
     <Compile Include="HeaderParser.cs" />
     <Compile Include="Pipelines\StartTracking\UpdateGeoIpData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
