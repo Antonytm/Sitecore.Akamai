@@ -1,6 +1,6 @@
-#Timezone rule values
+# Timezone rule values
 
-##Timezone Codes
+## Timezone Codes
 * GMT	
 * GMT+1	
 * GMT+2  	
@@ -34,7 +34,7 @@
 * GMT-11
 * GMT-12
 
-##Other Timezone codes
+## Other Timezone codes
 
 In addition to the above Timezone codes, the codes below are also used. Their corresponding GMT Offsets have been provided.
 

@@ -8,4 +8,7 @@
 
 ### GeoIp Rules
 * City
-* Country code: [list of country codes](https://github.com/Antonytm/Sitecore.Akamai/blob/master/docs/cc2continent.csv)
+* Continent: [list of continents](docs/continentCodes.csv)
+* Country code: [list of country codes](docs/cc2continent.csv)
+* Timezone: [list of timezones](docs/timezone.md)
+
