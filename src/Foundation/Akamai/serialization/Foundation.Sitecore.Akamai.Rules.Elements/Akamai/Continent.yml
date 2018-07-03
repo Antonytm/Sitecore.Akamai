@@ -1,16 +1,16 @@
 ﻿---
-ID: "a64aedb2-2af1-4232-bbff-4eb7b9e935e9"
+ID: "7a6b13cc-50b0-4c07-a2e7-fd7a0751c332"
 Parent: "dcd7edb9-9650-4d92-82a6-130673cf0137"
 Template: "f0d16eee-3a05-4e43-a082-795a32b873c0"
-Path: /sitecore/system/Settings/Rules/Definitions/Elements/Akamai/Device Is Tablet
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Akamai/Continent
 DB: master
 SharedFields:
 - ID: "ab51c8b2-f0e1-4471-9aae-cc080d774923"
   Hint: Type
-  Value: Foundation.Akamai.DeviceDetection.Rules.Conditions.DeviceIsTablet, Foundation.Akamai
+  Value: Foundation.Akamai.GeoIp.Rules.Conditions.ContinentCondition, Foundation.Akamai
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 500
+  Value: 200
 Languages:
 - Language: en
   Versions:
@@ -18,11 +18,11 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20180701T120926Z
+      Value: 20180703T183144Z
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
         sitecore\admin
     - ID: "af321234-4eb9-4ef5-9197-65903351939c"
       Hint: Text
-      Value: where the device type is tablet
+      Value: "where the continent [operatorid,StringOperator,,compares to] [value,,,continent]"

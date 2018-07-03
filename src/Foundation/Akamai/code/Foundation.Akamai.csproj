@@ -116,6 +116,8 @@
     <Compile Include="Extensions.cs" />
     <Compile Include="GeoIp\HeaderParser.cs" />
     <Compile Include="GeoIp\LookupProvider.cs" />
+    <Compile Include="GeoIp\Rules\Conditions\TimezoneCondition.cs" />
+    <Compile Include="GeoIp\Rules\Conditions\ContinentCondition.cs" />
     <Compile Include="GeoIp\Rules\Conditions\CountryCodeCondition.cs" />
     <Compile Include="GeoIp\Rules\Conditions\CityCondition.cs" />
     <Compile Include="HeaderParser.cs" />
