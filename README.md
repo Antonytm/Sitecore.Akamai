@@ -10,5 +10,7 @@
 * City
 * Continent: [list of continents](docs/continentCodes.csv)
 * Country code: [list of country codes](docs/cc2continent.csv)
+* Latitude
+* Longitude
 * Timezone: [list of timezones](docs/timezone.md)
 
