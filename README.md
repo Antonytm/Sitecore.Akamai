@@ -2,6 +2,13 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/1c9cpp38yavc6c51?svg=true)](https://ci.appveyor.com/project/Antonytm/sitecore-akamai)
 
+[![](https://sonarcloud.io/api/project_badges/quality_gate?project=Sitecore.Akamai)](https://sonarcloud.io/dashboard/index/Sitecore.Akamai)
+
+[![](https://sonarcloud.io/api/project_badges/measure?project=Sitecore.Akamai&metric=coverage)](https://sonarcloud.io/component_measures?id=Sitecore.Akamai&metric=coverage)
+[![](https://sonarcloud.io/api/project_badges/measure?project=Sitecore.Akamai&metric=code_smells)](https://sonarcloud.io/component_measures?id=Sitecore.Akamai&metric=code_smells) 
+[![](https://sonarcloud.io/api/project_badges/measure?project=Sitecore.Akamai&metric=bugs)](https://sonarcloud.io/component_measures?id=Sitecore.Akamai&metric=bugs)
+[![](https://sonarcloud.io/api/project_badges/measure?project=Sitecore.Akamai&metric=vulnerabilities)](https://sonarcloud.io/project/issues?id=Sitecore.Akamai&resolved=false&types=VULNERABILITY)
+
 ### Purpose of module:
 Utilize features of Akamai CDN on Sitecore project
 
