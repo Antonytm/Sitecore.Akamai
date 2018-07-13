@@ -8,7 +8,13 @@ before_build:
 build:
   project: Sitecore.Akamai.sln
 after_build:
+  - MSBuild.SonarQube.Runner.exe begin /k:"Sitecore.Akamai" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%sonar_token%"
+  - msbuild "Sitecore.Akamai.sln"
+  - MSBuild.SonarQube.Runner.exe end /d:"sonar.login=%sonar_token%"
   - ps: .\build\build.ps1  
+environment:
+  sonar_token:
+    secure: 5ZTmF0ff7qEIVt7qEgJpSCBcopbSqY3O0uv3gMLJZ9M04A6MyHoz9FAqP6HI/7eX
 deploy:
   release: Sitecore.Akamai-v$(appveyor_build_version)
   description: 'Using Akamai features inside Sitecore'
@@ -24,3 +30,4 @@ install:
   - ps: Install-Module -Name Sitecore.Courier -Force
   - ps: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
   - choco install sitecore-courier
+  - choco install "msbuild-sonarqube-runner" -y
