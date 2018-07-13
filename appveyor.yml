@@ -6,7 +6,7 @@ before_build:
   - echo %sonar_token%
   - nuget sources add -Name SitecorePublicFeed -Source https://sitecore.myget.org/F/sc-packages/api/v3/index.json
   - nuget restore Sitecore.Akamai.sln
-  - MSBuild.SonarQube.Runner.exe begin /k:"antonytm-github" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=b2a60f4b09131d8329fcebff1a62ed4a48f82e5f" /d:"sonar.organization=Antonytm" /d:"sonar.projectName=Sitecore.Akamai"
+  - MSBuild.SonarQube.Runner.exe begin /k:"antonytm-github" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=b2a60f4b09131d8329fcebff1a62ed4a48f82e5f" /d:"sonar.organization=Antonytm" /n:"Sitecore.Akamai"
 build:
   project: Sitecore.Akamai.sln
 after_build:
