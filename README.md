@@ -33,3 +33,8 @@ When you hosts your Sitecore project under Akamai CDN(content delivery network) 
 
 To develop and test you need to have headers added by Akamai. But will have Akamai headers only if you hosts on Akamai.
 To have ability develop locally was created Sitecore.Akamai.Utils project. You need to copy assembly and configuration to your website folder. It adds Akamai headers to all your request.
+
+## Additional materials
+[Sitecore and Akamai Hidden Gems, Part 1: GeoIp Detection](http://sitecorevn.blogspot.com/2018/07/sitecore-and-akamai-hidden-gems-part-1.html)
+
+[Sitecore and Akamai Hidden Gems, Part 2: Device Detection](http://sitecorevn.blogspot.com/2018/07/sitecore-and-akamai-hidden-gems-part-2.html)
