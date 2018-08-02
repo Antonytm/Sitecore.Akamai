@@ -53,7 +53,7 @@
       <HintPath>..\..\..\..\packages\Sitecore.Analytics.NoReferences.8.2.180406\lib\NET452\Sitecore.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Analytics.Model, Version=11.40.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\packages\Sitecore.Analytics.Model.NoReferences.9.0.180604\lib\NET452\Sitecore.Analytics.Model.dll</HintPath>
+      <HintPath>..\..\..\..\packages\Sitecore.Analytics.Model.NoReferences.9.0.180604\lib\NET462\Sitecore.Analytics.Model.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Kernel.NoReferences.8.2.170614\lib\NET452\Sitecore.Kernel.dll</HintPath>
