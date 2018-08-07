@@ -38,3 +38,5 @@ To have ability develop locally was created Sitecore.Akamai.Utils project. You n
 [Sitecore and Akamai Hidden Gems, Part 1: GeoIp Detection](http://sitecorevn.blogspot.com/2018/07/sitecore-and-akamai-hidden-gems-part-1.html)
 
 [Sitecore and Akamai Hidden Gems, Part 2: Device Detection](http://sitecorevn.blogspot.com/2018/07/sitecore-and-akamai-hidden-gems-part-2.html)
+
+[Few words about CI on this project](https://sitecorevn.blogspot.com/2018/08/it-is-copy-of-my-article-placed-in.html)
